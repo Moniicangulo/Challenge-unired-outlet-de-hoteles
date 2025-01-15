@@ -1,0 +1,86 @@
+:root {
+  --b-image: 1.25rem;
+}
+
+.card {
+  display: flex;
+  
+  border-radius: var(--b-image);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  height: 200px;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 4px rgb(173, 216, 230);
+    -webkit-box-shadow: 0px 0px 4px rgb(173, 216, 230);
+    -moz-box-shadow: 0px 0px 4px rgb(173, 216, 230);
+  }
+}
+.image__container {
+  width: 350px;
+  .image {
+    object-fit: fill;
+    border-bottom-left-radius: var(--b-image);
+    border-top-left-radius: var(--b-image);
+    width: 100%;
+    height: 100%;
+  }
+}
+.info__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  width: 100%;
+}
+
+.info__hotel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  .name {
+    font-weight: bold;
+    font-size: var(--tx-lg);
+  }
+  .regionName,
+  .mealType {
+    font-size: var(--tx-sm);
+  }
+  .regionName {
+    color: var(--gray);
+  }
+  .mealType {
+    margin-top: 0.5rem;
+  }
+}
+
+.prices__hotel {
+  align-items: end;
+  color: var(--gray);
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  font-size: var(--tx-sm);
+  justify-content: end;
+
+  .discount {
+    background-color: var(--red);
+    border-radius: 0.35rem;
+    color: var(--white);
+    font-weight: 600;
+    padding: 0.35rem 0.5rem;
+    width: fit-content;
+  }
+  .origHighestPrice {
+    font-size: var(--tx-base);
+  }
+
+  .pricePerNight {
+    font-size: var(--tx-lg);
+    color: var(--black);
+  }
+}
+.lineThrough {
+  text-decoration: line-through;
+}
