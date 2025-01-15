@@ -4,20 +4,7 @@ import { useEffect, useState } from "react";
 import { getHotels } from "@/lib/api";
 import HotelCard from "@/components/HotelCard/HotelCard"; 
 import style from "./page.module.css";
-
-type mealType = string | { code: number; text: string };
-interface Hotel {
-  hotelId: number;
-  name: string;
-  regionName: string;
-  stars: number;
-  photos: string[];
-  pricePerNight: number;
-  originalHighestPrice: number;
-  originalLowestPrice: number;
-  discounts: number[];
-  mealType: mealType;
-}
+import { Hotel } from "@/types/Hotel";
 
 export default function Home() {
   const [hotels, setHotels] = useState<Hotel[]>([]);
