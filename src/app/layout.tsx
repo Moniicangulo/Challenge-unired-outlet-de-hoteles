@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-
 export const metadata: Metadata = {
-  title: "Busca y reserva hoteles | Unired",
-  description: "Encuentra y reserva hoteles en cualquier lugar del mundo. Precios exclusivos, reseñas verificadas y ofertas increíbles.",
-  keywords: "hoteles, reservas, alojamiento, ofertas de hoteles, búsqueda de hoteles",
+  title: "Unired | Search and Book Hotels",
+  description:
+    "Find and book hotels anywhere in the world. Exclusive prices, verified reviews, and incredible deals.",
+  keywords: "hotels, bookings, accommodations, hotel deals, hotel search",
 };
 
 export default function RootLayout({
@@ -15,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
