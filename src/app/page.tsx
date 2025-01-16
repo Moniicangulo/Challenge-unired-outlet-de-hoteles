@@ -43,7 +43,7 @@ export default function Home() {
     fetchHotels();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <span className={style.loader}></span>;
   if (error) return <div>Error: {error}</div>;
   if (hotels.length === 0) return <div>No hotels found.</div>;
 
