@@ -7,7 +7,7 @@ export const Header = () => {
       <div className={style.container}>
         <div className={style.titles}>
           <h1>Welcome to the Hotel Booking Application</h1>
-          <p>Explore the best hotels for your next trip.</p>
+          <p className={style.subtitle}>Explore the best hotels for your next trip.</p>
         </div>
         <figure className={style.image__hotel}>
           <Image

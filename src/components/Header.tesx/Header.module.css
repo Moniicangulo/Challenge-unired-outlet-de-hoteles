@@ -6,7 +6,7 @@
     font-weight: 700;
     text-align: start;
     width: 100vw;
-    p{
+    .subtitle{
         margin-top: 1rem;
       font-weight: 200;
     }
