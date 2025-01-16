@@ -15,6 +15,7 @@ export const Header = () => {
             width={800}
             height={400}
             alt="hotel"
+            className={style.image}
           />
         </figure>
       </div>
