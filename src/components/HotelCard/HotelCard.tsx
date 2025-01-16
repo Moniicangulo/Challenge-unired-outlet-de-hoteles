@@ -1,7 +1,7 @@
 import style from "./HotelCard.module.css";
 import Image from "next/image";
 import StarRating from "./StarRating/StarRating";
-import { Utensils } from "lucide-react";
+import { Utensils, BedDouble } from "lucide-react";
 import { Hotel } from "@/types/Hotel";
 
 const HotelCard = ({ hotel }: { hotel: Hotel }) => {
@@ -17,6 +17,11 @@ const HotelCard = ({ hotel }: { hotel: Hotel }) => {
     mealType,
   } = hotel;
 
+  const formatPrice = (price: number): string => {
+    return price.toLocaleString("es-MX", {
+      minimumFractionDigits: 2,
+    });
+  };
   return (
     <div className={style.card}>
       <figure className={style.image__container}>
@@ -34,25 +39,29 @@ const HotelCard = ({ hotel }: { hotel: Hotel }) => {
           <StarRating stars={stars} />
           <span className={style.regionName}>{regionName}</span>
           <div className={style.mealType}>
-            <Utensils size={12} />
+            {typeof mealType === "string" ? (
+              <BedDouble size={16} />
+            ) : (
+              <Utensils size={16} />
+            )}
             <span>
               {typeof mealType === "string" ? mealType : mealType.text}
             </span>
           </div>
         </div>
         <div className={style.prices__hotel}>
-          <span className={style.discount}>{discounts[0]}% off Delivery</span>
+          <span className={style.discount}>{discounts[0]}% Off</span>
           <p className={style.origHighestPrice}>
             Regular price{" "}
             <span className={style.lineThrough}>
-              MXN{originalHighestPrice.toFixed(2)}
+            MXN{formatPrice(originalHighestPrice)}
             </span>
           </p>
           <span className={style.pricePerNight}>
-            MXN{pricePerNight.toFixed(2)} per night
+            MXN{formatPrice(pricePerNight)} / night
           </span>
           <span>
-            MXN{originalLowestPrice.toFixed(2)} per stay, taxes and charges
+            MXN{formatPrice(originalLowestPrice)} per stay, taxes and charges
             included.
           </span>
         </div>
