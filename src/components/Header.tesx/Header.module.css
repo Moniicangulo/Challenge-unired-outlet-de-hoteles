@@ -1,0 +1,64 @@
+.header{
+    background-color: rgb(35, 67, 104);
+    color: var(--white);
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: start;
+    width: 100vw;
+    p{
+        margin-top: 1rem;
+      font-weight: 200;
+    }
+  }
+  .titles{
+    margin-left: 5%;
+    width: 60%;
+  }
+  .image__hotel{
+    border-top-left-radius: 7rem;
+    object-fit: contain;
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-top: 5rem;
+    overflow: hidden;
+    bottom: -10;
+
+
+  position: relative;
+    width: 40%;
+    img{
+      width: 100%;
+    }
+  }
+
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+  }
+
+  @media (max-width: 769px) {
+  .image__hotel{
+    width: 90%;
+    height: 200px;
+    align-self: flex-end;
+    right: -100px;
+  }
+  .titles{
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white; /* Ajusta el color según sea necesario */
+    text-align: start;
+    z-index: 2;
+  }
+  }
